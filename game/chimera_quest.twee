@@ -1,0 +1,190 @@
+:: Chimera Quest11
+“哦，这个名字...”约旦沉思了一会，“我只在旧版教宗中看到过这个名字，处于未知原因，新版教宗似乎把它给移除了。如果你感兴趣的话，我可以帮你找一找旧版的副本。”<br><br>
+你们前往神殿的角落，约旦在书架上翻找，很快就抽出了一本看起来有点年代的书，“这里所有的书籍都是公共的，如果你还有其他问题，请随时问我。”<br>
+你向约旦表示感谢。<br><br>
+
+<<link [[翻阅|Chimera Quest12]]>><</link>>
+
+:: Chimera Quest12
+你正打算翻开目录，就发现书页间夹着什么东西，你翻到那一页将它取出。<br><br>
+<span class=“gold”>这是一个黄铜小雕像，</span>模制成鹰的形状。你用手抓住了它的喙。它看起来很旧。<br><br>
+你将注意力转移到书页，很快就发现了你所寻找的名字，它们已经被用笔标了出来，这能为你节省不少时间。<br><br>
+<<link [[拾取|Chimera Quest12 Take]]>><</link>><br>
+<<link [[阅读|Chimera Quest13]]>><</link>>
+
+:: Chimera Quest12 Take
+<<museumAntiqueStatus "antiquebrassstatuette" "found">>
+<<wearProp "brass statuette">>
+<<set $antiquemoney += 120>>
+反正没人要，你把黄铜小雕像戴到了身上。<br><br>
+<<link [[阅读|Chimera Quest13]]>><</link>>
+
+
+:: Chimera Quest13
+<<if $chimerastage lte 2>> <<set $chimerastage to 3>><</if>>
+
+奇美拉，神话中的一种怪物，由众多神祇共同创造，拥有世间所有物种的特征。它拥有无数的耳朵，背生六翼，身上插满肢体，永远游荡在世间，追杀那些胆敢侵扰它的生灵，直至死亡。<br>
+都是些笼统的文字，除了第一段，它详细记载了奇美拉的出生：<br><br><br>
+
+乘翼携
+<<if $chimeraq31 is 1 or ($bird.upgrades && $bird.upgrades.decor is 5)>><span style="color:#00ea00">淬银</span><<else>><span style="color:#dddddd">淬银</span><</if>>
+至荒原之巅，
+<<if $chimeraq31 is 1 or $chimerastage gte 4>><span style="color:#00ea00">银裂</span><<else>><span style="color:#d86920">银裂</span><</if>>
+，成三卵。<br><br>
+
+一卵坠于大陆，随历史随波逐流，以
+<<if $chimeraq31 is 1 or $museumAntiques.antiques.antiqueforestgem is "museum">><span style="color:#00ea00">宝石</span><<else>><span style="color:#00b200">宝石</span><</if>>
+铸眼，以
+<<if $chimeraq31 is 1 or $museumAntiques.antiques.antiquediamond is "museum">><span style="color:#00ea00">钻石</span><<else>><span style="color:#27f5f5">钻石</span><</if>>
+铸心，以
+<<if $chimeraq31 is 1 or $museumAntiques.antiques.antiquecoralring is "museum">><span style="color:#00ea00">珊瑚</span><<else>><span style="color:#ed5b36">珊瑚</span><</if>>
+铸脑，以
+<<if $chimeraq31 is 1 or $museumAntiques.antiques.antiquewhitecrystal is "museum">><span style="color:#00ea00">白水晶</span><<else>><span style="color:#e4e4e4">白水晶</span><</if>>
+铸爪，以
+<<if $chimeraq31 is 1 or $museumAntiques.antiques.antiqueobsidiandisc is "museum">><span style="color:#00ea00">黑曜石</span><<else>><span style="color:#492a61">黑曜石</span><</if>>
+铸骨，最后将
+<<if $chimeraq31 is 1 or $museumAntiques.antiques.antiquegoldchastitybelt is "museum">><span style="color:#00ea00">神圣的</span>
+    <<else>><span style="color:#f1e306">神圣的</span><</if>>
+<<if $chimeraq31 is 1 or $museumAntiques.antiques.antiquegoldchastitybelt is "museum" or $museumAntiques.antiques.antiquegoldcoin is "museum" or $museumAntiques.antiques.antiquegoldring is "museum" or $museumAntiques.antiques.antiquegoldbrooch is "museum" or $museumAntiques.antiques.antiquegoldcompass is "museum" or $museumAntiques.antiques.antiquegoldnecklace is "museum">>
+<span style="color:#00ea00">金</span><<else>><span style="color:#f1e306">金</span><</if>>
+化为血肉，
+<<if $chimeraq31 is 1>><span style="color:#00ea00">塑银成体</span><<else>><span style="color:#d86920">塑银成体</span><</if>>
+<br><br>
+
+二卵落于汪洋，随北风指引，登至海岛，岛上的国王供奉其于
+<<if $chimeraq32 is 1 or (!ndef $island && !ndef $island.home && !ndef $island[$island.home] && $island[$island.home].chair is "advanced")>><span style="color:#00ea00">王座</span><<else>><span style="color:#f1e306">王座</span><</if>>
+，于
+<<if $chimeraq32 is 1>>血色月光<<else>><span style="color:#ee0a0a">血色月光</span><</if>>
+之下，
+<<if $chimeraq32 is 1>><span style="color:#00ea00">塑其魂魄</span><<else>><span style="color:#d86920">塑其魂魄</span><</if>>
+<br><br>
+
+三卵埋于
+<<if $chimeraq33 is 1>><span style="color:#00ea00">荒原边缘</span><<else>><span style="color:#d1a81d">荒原边缘</span><</if>>
+，与沃土之下沉睡，于
+<<if $chimeraq33 is 1>><span style="color:#00ea00">万花绽放</span><<else>><span style="color:#f35de8">万花绽放</span><</if>>
+之时发芽，然遭
+<<if $chimeraq33 is 1>>诡异之花<<else>><span style="color:#c51dd9">诡异之花</span><</if>>
+侵蚀，虽
+<<if $chimeraq33 is 1>><span style="color:#00ea00">塑其心智</span><<else>><span style="color:#d86920">塑其心智</span><</if>>
+，却因污秽残缺。<br><br>
+
+<<link [[返回|Temple]]>><</link>>
+
+
+:: Chimera Quest21
+<span style="color:#d86920">“淬银至荒原之巅，”</span><br><br>
+你已经按指示将银条带至高塔，但你不确定卷宗内的“银碎”是什么意思。难道你应该手动将其摔碎？<br>
+你拿起银条仔细观察，它表面光滑到足以映射出你的样貌：那是
+<<if $wolfgirl is 6>>一头狼<<elseif $cat is 6>>一只猫<<elseif $cow is 6>>一头牛<<elseif $harpy is 6>>一只鸟<<elseif $fox is 6>>一只狐狸<<else>>你自己<</if>>。<br>
+你听到了清脆的碎裂声，两道裂痕从双眼扩散。<br><br>
+<span style="color:#d86920">银条碎裂为三段。</span><br><br>
+碎裂的银块穿过你的双手，砸向地面。<br><br>
+<<link [[接住|Chimera Quest22]]>><</link>>
+
+:: Chimera Quest22
+<<if $chimerastage lte 3>> <<set $chimerastage to 4>><</if>>
+你企图抓住银块，但什么都没有摸到，一眨眼，银块消失不见。你抬起头，看见银条正好端端的坐在台面上。<br><br>
+<<link [[继续|Bird Tower]]>><</link>>
+
+:: Chimera Quest23
+你拿起银条，它如往常一样发着光，但你很确信它变轻了。<br><br>
+<<link [[返回|Bird Tower]]>><</link>>
+
+:: Chimera Quest31
+你正站在博物馆的中央，<span style="color:#d86920">历史的遗产随着时间的流逝在此堆积。</span><br><br>
+<<if $museumAntiques.antiques.antiqueforestgem is "museum" && $museumAntiques.antiques.antiquediamond is "museum" && $museumAntiques.antiques.antiquecoralring is "museum" && $museumAntiques.antiques.antiquewhitecrystal is "museum" && $museumAntiques.antiques.antiqueobsidiandisc is "museum" && $museumAntiques.antiques.antiquegoldchastitybelt is "museum">>
+    你环顾着你所收集的文物，从最南边的森林，到最北边的海岛，那些被遗忘的财富穿过无数世纪来到这里，而你则幸运地能成为将它们发掘的人。<br><br>
+    你的手感觉到一丝重量，你低头一看，你正拿着一块工整的银色正方体。<br><br>
+    <<link [[继续|Chimera Quest31 Done 1]]>><</link>>
+<<else>>
+    如果你能收集所有所需的材质，或许事情能有所发展。<br><br>
+    <<link [[返回|Museum]]>><</link>>
+<</if>>
+
+:: Chimera Quest31 Done 1
+灯光暗了下来，你四周的墙壁开始颤动，开始缓慢地向你走来，展柜遭到挤压，玻璃逐一碎裂。<br>
+你呼叫着温特，转头想要逃跑，却发现四面都是墙壁，而温特也不知所踪。地面一阵晃动，你的手一抖，银块掉到了地上，一阵悠长的钟声在房间内回荡。你很快感觉周围的动静在慢慢减弱，终于停了下来。<br>
+你呼了一口气，刚放松下来，你的身后就发出了一声爆响。你背后的黑曜石圆盘碎裂了，锋利的的碎片从你身边划过，飞向地上的银块。那些难以识别的物质以一种你无法解释的形态从附近展柜中翻涌而出，于房间中央聚合。<br>
+你好不容易回过神，这种转变已经走向尾声，黄金般的流体在最后包裹住了一切，一个庞大的身影慢慢出现在了在你面前。<br><br>
+它牵动着它的腿，<span style="color:#d86920">数不清的腿</span>，缓缓站了起来......<br><br>
+<<link [[看|Chimera Quest31 Done 2]]>><</link>>
+:: Chimera Quest31 Done 2
+你看见了墙，那里什么都没有。<br><br>
+你回头，就看见温特如往常一样坐在柜台前记录着什么，显然没有发现你的异常。<br><br>
+或许这一切只是幻觉？但这个幻觉有些过于真实了，但你很确定发生了什么事情。<br><br>
+<<set $chimeraq31 to 1>>
+<<link [[返回|Museum]]>><</link>>
+
+
+:: Chimera Quest32
+你的脚下就是你所创造的王国，<span style="color:#d86920">而你的王座就在面前。</span><br><br>
+<<if Weather.bloodMoon>>
+    是时候了，你集中精神，一眨眼。一丝血色的光芒穿透了你所建造的遮蔽，为你铺起红毯，从你的脚下蔓延至<span style="color:#ee0a0a">王座</span>，你的房间此刻比正午的室外都要明亮。<br><br>
+    <<link [[前行|Chimera Quest32 Done 1]]>><</link>>
+<<else>>
+    你靠近你的王座，轻抚着扶手。王与王座均已就位，现在，你只需要等待一个血月。<br><br>
+    <<link [[返回|Island]]>><</link>>
+<</if>>
+
+:: Chimera Quest32 Done 1
+你顺着红毯走向<span style="color:#ee0a0a">王座</span>。<br>
+这个房间几乎和你在孤儿院的家一样子大，但此刻它显得及其广阔，你感觉花费了数个小时才走完整条红毯。不管怎么样，你终于到了。<br>
+你庄重地走上长段楼梯，即便你不记得你有造过这样的阶梯。你抵达了<span style="color:#ee0a0a">王座</span>，<span style="color:#ee0a0a">王座</span>上放着一块血红色的正方体，透过它，你看见了一轮红月。<br><br>
+<<link [[触摸|Chimera Quest32 Done 2]]>><</link>><br>
+<<link [[跪拜|Chimera Quest32 Done 3]]>><</link>>
+
+:: Chimera Quest32 Done 2
+<<set $chimeraq32 to 1>>
+你伸出手，企图抚摸，但时间的流动突然变得缓慢，你努力睁大眼睛，因为你知道，它会在你眨眼的瞬间逃逸。<br><br>
+你不受控制地眨眼了，当你再度睁眼，你正端坐在你的王座上。<br><br>
+<<link [[返回|Island]]>><</link>>
+
+:: Chimera Quest32 Done 3
+<<set $chimeraq32 to 1>>
+你面对王座跪下，闭上眼睛，却不知道该说些什么。不知过了多久，你感觉有一股力量将你托起。<br><br>
+你睁眼，发现你自己正蜷缩在你的王座上。<br><br>
+<<link [[返回|Island]]>><</link>>
+
+
+:: Chimera Quest33
+<<set $_nostrangeflower to true>>
+<<for _plantbed range $plots["farm"]>>
+  <<if _plantbed.plant is "strange_flower">>
+  	<<set $_nostrangeflower to false>>
+  	<<break>>
+  <</if>>
+<</for>>
+<<if $_nostrangeflower>>
+  <<for _plantbed range $plots["farm"]>>
+    <<if _plantbed.stage gte 5>>
+    	<<run $chimeraq33requiredflos.delete(_plantbed.plant)>> 
+    <</if>>
+  <</for>>	    
+<</if>>
+
+<<if $chimeraq33requiredflos.length is 0>>
+    你踏入农田，但很快就发现了不对劲，空气中弥漫着你从没闻过的香味。你继续前进，当路过你的花田时，你突然感觉到来自身侧，数量恐怖的目光，可当每你转头看，那种感觉便会消失。<br>
+    你很快就走到了农田的正中央。突然，你踩到了某个坚硬的东西。<br><br>
+    <<link [[低头看|Chimera Quest33 Done 1]]>><</link>>
+<<else>>
+    你正身处<span style="color:#d1a81d">田野之间</span>，外围荒地长着娇小的野花，空气中弥漫着缕缕清香。
+    <<if $_nostrangeflower>>
+      你隐约听见了什么，像是某人的耳语：<br><br>
+      <span style="color:#f35de8">还有......<<print $chimeraq33requiredflos.length>>种......</span><br><br>
+    <<else>>
+      风景很好，但你感觉到了<span style="color:#c51dd9">一丝违和</span>。<br><br>
+    <</if>>
+    <<link [[返回|Farm Fields]]>><</link>>
+<</if>>
+
+:: Chimera Quest33 Done 1
+你看见了一块纯白色的正方体，等你抬头，你发现自己正处于一片花海中，这里不是你的农田。<br>
+一阵细碎的摩擦声从四面八方传来，突然，五彩斑斓的花瓣从花丛中随风而起，形成了一股旋风环绕在你的周围。你尝试辨认，很快就发现花朵的种类远超你所认识的花卉，而每一种花都有着独一无二的颜色。<br>
+花瓣纷飞，拍打在你的身上，你的眼睛几乎花了，忍不住眨了一下眼。<br><br>
+<<link [[继续|Chimera Quest33 Done 2]]>><</link>>
+
+:: Chimera Quest33 Done 2
+<<set $chimeraq33 to 1>>
+当你回过神，你正仰面躺在田地上，你的田似乎没有发生什么变化，只剩下那股花香依旧没有散去。<br><br>
+<<link [[返回|Farm Fields]]>><</link>>

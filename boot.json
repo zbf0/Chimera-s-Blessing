@@ -1,0 +1,73 @@
+{
+    "name": "Chimera's Blessing",
+    "version": "5.4.9.2",
+    "styleFileList": [],
+    "scriptFileList_inject_early": [],
+    "scriptFileList": [
+		
+	],
+    "tweeFileList": [
+        "game/chimera.twee",
+        "game/chimera_meditation.twee",
+        "game/chimera_transform.twee",
+        "game/chimera_quest.twee",
+        "game/chimera_end.twee"
+    ],
+    "imgFileList": [],
+    "additionFile": [],
+    "addonPlugin": [
+        {
+            "modName": "TweeReplacer",
+            "addonName": "TweeReplacerAddon",
+            "modVersion": "1.0.0",
+            "params": [
+                {
+                    "passage": "Forest",
+                    "findString": "<<if $pubtask is \"forest\" and $pubtask2 isnot 1>>",
+                    "replace": "<<if $forest is 55>><<link [[巨石|Chimera Statue]]>><</link>><br><</if>><<if $pubtask is \"forest\" and $pubtask2 isnot 1>>"
+                },
+                {
+                    "passage": "Temple Jordan",
+                    "findString": "<<getouticon>>",
+                    "replace": "<<if V.chimerastage is 2>><<link [[询问从森林巨石听到的名字|Chimera Quest11]]>><</link>><</if>><br><br>\n<<getouticon>>"
+                },
+                {
+                    "passage": "Temple",
+                    "findString": "<<wolficon>>",
+                    "replace": "<<if V.chimerastage gte 3>><<link [[翻阅书籍|Chimera Quest13]]>><</link>><</if>><br><br>\n<<wolficon>>"
+                },
+                {
+                    "passage": "Bird Tower",
+                    "findString": "<<if $bird.lock is 1>>",
+                    "replace": "<<if V.chimerastage is 3 && $bird.upgrades.decor is 5>><<link [[检查银条|Chimera Quest21]]>><</link>><br><br><<elseif V.chimerastage gte 4>><<link [[检查银条|Chimera Quest23]]>><</link>><br><br><</if>>\n<<if $bird.lock is 1>>"
+                },
+                {
+                    "passage": "Museum",
+                    "findString": "<<oxfordicon>>",
+                    "replace": "<<if V.chimerastage is 4 && V.chimeraq31 is not 1>><<link [[清点收集|Chimera Quest31]]>><</link>><br><br><</if>>\n<<oxfordicon>>"
+                },
+                {
+                    "passage": "Island",
+                    "findString": "<<if $island.explore_locations.includes(\"castle\")>>",
+                    "replace": "<<if $island[$island.home].chair is \"advanced\" && V.chimerastage is 4 && V.chimeraq32 is not 1>><<link [[前往王座|Chimera Quest32]]>><</link>><br><br><</if>>\n<<if $island.explore_locations.includes(\"castle\")>>"
+                },
+                {
+                    "passage": "Smuggler Pub",
+                    "findString": "<<if $temple_spear_mission gte 1 and !$smuggler_pub_zephyr>>",
+                    "replace": "<<if ($temple_spear_mission gte 1 or V.chimerastage is 4) and !$smuggler_pub_zephyr>>"
+                },
+                {
+                    "passage": "Farm Fields",
+                    "findString": "<<display_plot farm>>",
+                    "replace": "<<if V.chimerastage is 4 && V.chimeraq33 is not 1>><<link [[走入农田|Chimera Quest33]]>><</link>><br><br><</if>>\n<<display_plot farm>>"
+                }
+            ]
+        }
+    ],
+    "dependenceInfo": [
+        {
+            "modName": "TweeReplacer",
+            "version": "^1.0.0"
+        }
+    ]
+}

@@ -1,0 +1,78 @@
+:: Chimera Statue
+
+<<if $chimeraintro is not 1>>
+    <<set $chimeraintro to 1>>
+	<<set $chimerastage to 1>>
+    你靠近了奇怪的巨石。它正屹立在一片被松树环绕的空地中央，周围的空气中带着淡淡的松脂香味。<br>
+	它和你平常看到的石头别无二致，但它周围的草地有些平整地不自然，像是被认为修剪。很少有人会跑到森林深处，更不会有闲情雅致去打理杂草。好奇心作祟，你跨过灌木，走到了它的面前。<br><br>
+	<<link [[继续|Chimera Statue]]>><</link>>
+
+<<elseif $chimerastage is 1 && $chimerawolfready is 1 && $chimeracatready is 1 && $chimeracowready is 1 && $chimeraharpyready is 1 && $chimerafoxready is 1>>
+	你从幻觉中归来，但这次有些不一样，哪怕已经睁眼，你的思维依旧混沌。你想要起身，却双腿一软又跌坐了回去。<br><br>
+	有什么东西接住了你，你知道是它，你忍住了睁眼的冲动。<br>
+	冥冥之中，你能感觉到它没有恶意，你不确定自己突发奇想将转化带到这里是出于你的好奇心还是它的引诱。你对它有太多的问题，它想做什么？为什么引导你做这些？为什么是你......<br><br>
+	你张嘴，问它：<br><br>
+    <<link [[你是谁|Chimera Stage 2 Give Name]]>><</link>><br>
+	<<link [[你是谁|Chimera Stage 2 Give Name]]>><</link>><br>
+	<<link [[你是谁|Chimera Stage 2 Give Name]]>><</link>><br>
+
+<<elseif $chimerastage is 4 && $chimeraq31 is 1 && $chimeraq32 is 1 && $chimeraq33 is 1>>
+	你回到了巨石面前。你曾怀疑自己为何要做到这种地步，怀疑对方的目的，怀疑自己的是否要承担这一切。这些情绪很快就消失了，你闻到了熟悉的花香，血红色的纹路爬上巨石，你似乎看见一片金黄遮盖了天空。<br>
+	它在等你。<br><br>
+	你一眨眼，一切又恢复了正常，但你知道该怎么做。<br><br>
+    <<link [[闭眼|Chimera End]]>><</link>>
+
+<<else>>
+	<<if $chimerastage is 1>>
+	    你正站在巨石的面前，四周被树木环绕。<br><br>
+	    <<if $chimerawolfready is 1>>
+		    <<tficon "wolf">><<link [[同调|Chimera Statue]]>><<chimeraClear>><<chimeraWolf>><<set $wolfgirl to 6>><<set $wolfbuild to 31>><</link>><<wolfgirl>><br>
+		<</if>>
+		<<if $chimeracatready is 1>>
+		    <<tficon "cat">><<link [[同调|Chimera Statue]]>><<chimeraClear>><<chimeraCat>><<set $cat to 10>><<set $catbuild to 71>><</link>><<cat>><br>
+		<</if>>
+		<<if $chimeracowready is 1>>
+		    <<tficon "cow">><<link [[同调|Chimera Statue]]>><<chimeraClear>><<chimeraCow>><<set $cow to 6>><<set $cowbuild to 31>><</link>><<cow>><br>
+		<</if>>
+		<<if $chimeraharpyready is 1>>
+		    <<tficon "bird">><<link [[同调|Chimera Statue]]>><<chimeraClear>><<chimeraHarpy>><<set $harpy to 6>><<set $birdbuild to 31>><</link>><<harpy>><br>
+		<</if>>
+		<<if $chimerafoxready is 1>>
+		    <<tficon "fox">><<link [[同调|Chimera Statue]]>><<chimeraClear>><<chimeraFox>><<set $fox to 6>><<set $foxbuild to 31>><</link>><<fox>><br>
+		<</if>>
+
+
+	<<elseif $chimerastage lte 4>>
+	    你正站在巨石的面前，巨石上浮现出的花纹相互缠绕。<br><br>
+        <<tficon "wolf">><<link [[同调|Chimera Statue]]>><<chimeraClear>><<chimeraWolf>><</link>><<wolfgirl>><br>
+		<<tficon "cat">><<link [[同调|Chimera Statue]]>><<chimeraClear>><<chimeraCat>><</link>><<cat>><br>
+		<<tficon "cow">><<link [[同调|Chimera Statue]]>><<chimeraClear>><<chimeraCow>><</link>><<cow>><br>
+		<<tficon "bird">><<link [[同调|Chimera Statue]]>><<chimeraClear>><<chimeraHarpy>><</link>><<harpy>><br>
+		<<tficon "fox">><<link [[同调|Chimera Statue]]>><<chimeraClear>><<chimeraFox>><</link>><<fox>><br>
+
+	<<else>>
+	    你正站在巨石的面前，你将手贴上巨石表面，一股温暖顺着指尖流向全身。<br><br>
+	    <<tficon "wolf">><<link [[同调|Chimera Statue]]>><<chimeraWolf>><</link>><<wolfgirl>><br>
+		<<tficon "cat">><<link [[同调|Chimera Statue]]>><<chimeraCat>><</link>><<cat>><br>
+		<<tficon "cow">><<link [[同调|Chimera Statue]]>><<chimeraCow>><</link>><<cow>><br>
+		<<tficon "bird">><<link [[同调|Chimera Statue]]>><<chimeraHarpy>><</link>><<harpy>><br>
+		<<tficon "fox">><<link [[同调|Chimera Statue]]>><<chimeraFox>><</link>><<fox>><br>
+	<</if>>
+	<<if $chimerawolfready is 1 || $chimeracatready is 1 || $chimeracowready is 1 || $chimeraharpyready is 1 || $chimerafoxready is 1>>
+	    <<link [[归还|Chimera Statue]]>><<chimeraClear>><</link>><br><br>
+	<</if>>
+	<<if $chimerastage is 1>>
+	    <<link [[冥想|Chimera Meditation]]>><</link>><br><br>
+	<</if>>
+	<<link [[返回|Forest]]>><</link>>
+
+<</if>>
+
+
+:: Chimera Stage 2 Give Name
+<<set $chimerastage to 2>>
+<<set $chimeraq33requiredflos to ["red_rose", "white_rose", "orchid", "daisy", "tulip", "lily", "poppy", "carnation", "plumeria"]>>
+你感到一个尖锐的东西抵上了你的额头，它在你的脑内刻下了扭曲的字符。你从未见过那些文字，但你能读懂。<br><br>
+<span style="color:#ffba02">奇美拉</span><br><br>
+<span style="color:#d86920">你从此处获得的转化将不再随时间消退。</span><br><br>
+<<link [[醒来|Chimera Statue]]>><</link>>
