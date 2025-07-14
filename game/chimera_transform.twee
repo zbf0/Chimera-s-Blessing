@@ -63,12 +63,12 @@
 <</widget>>
 
 <<widget "chimeraClear">>
-    <<set $physicalTransform to 0>>
-	<<clearAnimalTransformations>>
-	<<catHeterochromiaTF 0>>
-	<<if !ndef $original_colour>>
+    <<if $cat gte 7>>
+	    <<catHeterochromiaTF 0>>
 	    <<set $leftEyeColour to $original_colour[0]>>
 	    <<set $rightEyeColour to $original_colour[1]>>
+	    <<set $transformationParts.cat.heterochromia to "disabled">>
 	<</if>>
-	<<set $transformationParts.cat.heterochromia to "disabled">>
+    <<set $physicalTransform to 0>>
+	<<clearAnimalTransformations>>
 <</widget>>
