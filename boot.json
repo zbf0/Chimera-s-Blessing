@@ -52,14 +52,29 @@
                     "replace": "<<if $island[$island.home].chair is \"advanced\" && V.chimerastage is 4 && V.chimeraq32 is not 1>><<link [[前往王座|Chimera Quest32]]>><</link>><br><br><</if>>\n<<if $island.explore_locations.includes(\"castle\")>>"
                 },
                 {
-                    "passage": "Smuggler Pub",
-                    "findString": "<<if $temple_spear_mission gte 1 and !$smuggler_pub_zephyr>>",
-                    "replace": "<<if ($temple_spear_mission gte 1 or V.chimerastage is 4) and !$smuggler_pub_zephyr>>"
-                },
-                {
                     "passage": "Farm Fields",
                     "findString": "<<display_plot farm>>",
                     "replace": "<<if V.chimerastage is 4 && V.chimeraq33 is not 1>><<link [[走入农田|Chimera Quest33]]>><</link>><br><br><</if>>\n<<display_plot farm>>"
+                },
+                {
+                    "passage": "Smuggler Pub",
+                    "findString": "<<if $temple_spear_mission gte 1 and !$smuggler_pub_zephyr>>",
+                    "replace": "<<if ($temple_spear_mission gte 1 or V.chimerastage gte 3) and !$smuggler_pub_zephyr>>"
+                },
+                {
+                    "passage": "Pirate Smuggler Entrance 4",
+                    "findString": "<<if $temple_spear_mission is 1>>",
+                    "replace": "<<if $temple_spear_mission is 1 or V.chimerastage gte 3>>"
+                },
+                {
+                    "passage": "Pirate Zephyr",
+                    "findString": "<<if $temple_spear_mission gte 1 and $pirate_journey is undefined>>",
+                    "replace": "<<if ($temple_spear_mission gte 1 or V.chimerastage gte 3) and $pirate_journey is undefined>>"
+                },
+                {
+                    "passage": "Hospital Foyer",
+                    "findString": "<<if $player.breastsize lte 11>>",
+                    "replace": "<<if V.chimerastage gte 3 && $psych is 0>><<link [[咨询你在森林深处看见的幻觉|Chimera Harper Appointment]]>><</link>><br><</if>>\n<<if $player.breastsize lte 11>>"
                 }
             ]
         }
