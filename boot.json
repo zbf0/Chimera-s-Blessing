@@ -11,7 +11,8 @@
         "game/chimera_meditation.twee",
         "game/chimera_transform.twee",
         "game/chimera_quest.twee",
-        "game/chimera_end.twee"
+        "game/chimera_end.twee",
+        "game/chimera_lifeofquality.twee"
     ],
     "imgFileList": [],
     "additionFile": [],
@@ -52,9 +53,14 @@
                     "replace": "<<if $island[$island.home].chair is \"advanced\" && V.chimerastage is 4 && V.chimeraq32 is not 1>><<link [[前往王座|Chimera Quest32]]>><</link>><br><br><</if>>\n<<if $island.explore_locations.includes(\"castle\")>>"
                 },
                 {
+                    "passage": "Garden Flowers",
+                    "findString": "<<display_plot garden>>",
+                    "replace": "<<if V.chimerastage is 4 && V.chimeraq33 is not 1>><<set V.chimeraq33location to \"garden\">><<link [[走向苗圃|Chimera Quest33]]>><</link>><br><br><</if>>\n<<display_plot garden>>"
+                },
+                {
                     "passage": "Farm Fields",
                     "findString": "<<display_plot farm>>",
-                    "replace": "<<if V.chimerastage is 4 && V.chimeraq33 is not 1>><<link [[走入农田|Chimera Quest33]]>><</link>><br><br><</if>>\n<<display_plot farm>>"
+                    "replace": "<<if V.chimerastage is 4 && V.chimeraq33 is not 1>><<set V.chimeraq33location to \"farm\">><<link [[走入农田|Chimera Quest33]]>><</link>><br><br><</if>>\n<<display_plot farm>>"
                 },
                 {
                     "passage": "Smuggler Pub",
@@ -75,6 +81,16 @@
                     "passage": "Hospital Foyer",
                     "findString": "<<if $player.breastsize lte 11>>",
                     "replace": "<<if V.chimerastage gte 3 && $psych is 0>><<link [[咨询你在森林深处看见的幻觉|Chimera Harper Appointment]]>><</link>><br><</if>>\n<<if $player.breastsize lte 11>>"
+                },
+                {
+                    "passage": "Transformation Widgets",
+                    "findString": "<<trauma 15>>",
+                    "replace": "<<if $chimerastage is not 5>><<trauma 15>><</if>>"
+                },
+                {
+                    "passage": "Bird Tower Build Decor Silver",
+                    "findString": "<<link [[Next|Bird Tower]]>><<endevent>><</link>>",
+                    "replace": "<<if V.chimerastage is 3>><<link [[Next|Chimera Quest21]]>><<endevent>><</link>><<else>><<link [[Next|Bird Tower]]>><<endevent>><</link>><</if>>"
                 }
             ]
         }

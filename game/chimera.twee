@@ -58,7 +58,7 @@
 		<<tficon "bird">><<link [[同调|Chimera Statue]]>><<chimeraHarpy>><</link>><<harpy>><br>
 		<<tficon "fox">><<link [[同调|Chimera Statue]]>><<chimeraFox>><</link>><<fox>><br>
 	<</if>>
-	<<if $chimerawolfready is 1 || $chimeracatready is 1 || $chimeracowready is 1 || $chimeraharpyready is 1 || $chimerafoxready is 1>>
+	<<if $chimerastage gte 2 || ($chimerawolfready is 1 && $wolfgirl is not 0) || ($chimeracatready is 1 && $cat is not 0) || ($chimeracowready is 1 && $cow is not 0) || ($chimeraharpyready is 1 && $harpy is not 0) || ($chimerafoxready is 1 && $fox is not 0)>>
 	    <<link [[归还|Chimera Statue]]>><<chimeraClear>><</link>><br><br>
 	<</if>>
 	<<if $chimerastage is 1>>
