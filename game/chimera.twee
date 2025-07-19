@@ -64,7 +64,7 @@
 	<<if $chimerastage is 1>>
 	    <<link [[冥想|Chimera Meditation]]>><</link>><br><br>
 	<</if>>
-	<<link [[返回|Forest]]>><</link>>
+	<<link [[返回|Forest]]>><<set $eventskip to 1>><</link>>
 
 <</if>>
 

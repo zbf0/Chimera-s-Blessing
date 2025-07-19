@@ -27,44 +27,44 @@
 都是些笼统的文字，除了第一段，它详细记载了奇美拉的出生：<br><br><br>
 
 乘翼携
-<<if $chimeraq31 is 1 or ($bird.upgrades && $bird.upgrades.decor is 5)>><span style="color:#00ea00">淬银</span><<else>><span style="color:#dddddd">淬银</span><</if>>
+<<if $chimeraq31 is 1 or ($bird.upgrades && $bird.upgrades.decor is 5)>><span style="color:green">淬银</span><<else>><span style="color:#dddddd">淬银</span><</if>>
 至荒原之巅，
-<<if $chimeraq31 is 1 or $chimerastage gte 4>><span style="color:#00ea00">银裂</span><<else>><span style="color:#d86920">银裂</span><</if>>
+<<if $chimeraq31 is 1 or $chimerastage gte 4>><span style="color:green">银裂</span><<else>><span style="color:#d86920">银裂</span><</if>>
 ，成三卵。<br><br>
 
 一卵坠于大陆，随历史随波逐流，以
-<<if $chimeraq31 is 1 or $museumAntiques.antiques.antiqueforestgem is "museum">><span style="color:#00ea00">宝石</span><<else>><span style="color:#00b200">宝石</span><</if>>
+<<if $chimeraq31 is 1 or $museumAntiques.antiques.antiqueforestgem is "museum">><span style="color:green">宝石</span><<else>><span style="color:#00b200">宝石</span><</if>>
 铸眼，以
-<<if $chimeraq31 is 1 or $museumAntiques.antiques.antiquediamond is "museum">><span style="color:#00ea00">钻石</span><<else>><span style="color:#27f5f5">钻石</span><</if>>
+<<if $chimeraq31 is 1 or $museumAntiques.antiques.antiquediamond is "museum">><span style="color:green">钻石</span><<else>><span style="color:#27f5f5">钻石</span><</if>>
 铸心，以
-<<if $chimeraq31 is 1 or $museumAntiques.antiques.antiquecoralring is "museum">><span style="color:#00ea00">珊瑚</span><<else>><span style="color:#ed5b36">珊瑚</span><</if>>
+<<if $chimeraq31 is 1 or $museumAntiques.antiques.antiquecoralring is "museum">><span style="color:green">珊瑚</span><<else>><span style="color:#ed5b36">珊瑚</span><</if>>
 铸脑，以
-<<if $chimeraq31 is 1 or $museumAntiques.antiques.antiquewhitecrystal is "museum">><span style="color:#00ea00">白水晶</span><<else>><span style="color:#e4e4e4">白水晶</span><</if>>
+<<if $chimeraq31 is 1 or $museumAntiques.antiques.antiquewhitecrystal is "museum">><span style="color:green">白水晶</span><<else>><span style="color:#e4e4e4">白水晶</span><</if>>
 铸爪，以
-<<if $chimeraq31 is 1 or $museumAntiques.antiques.antiqueobsidiandisc is "museum">><span style="color:#00ea00">黑曜石</span><<else>><span style="color:#492a61">黑曜石</span><</if>>
+<<if $chimeraq31 is 1 or $museumAntiques.antiques.antiqueobsidiandisc is "museum">><span style="color:green">黑曜石</span><<else>><span style="color:#492a61">黑曜石</span><</if>>
 铸骨，最后将
-<<if $chimeraq31 is 1 or $museumAntiques.antiques.antiquegoldchastitybelt is "museum">><span style="color:#00ea00">神圣的</span>
+<<if $chimeraq31 is 1 or $museumAntiques.antiques.antiquegoldchastitybelt is "museum">><span style="color:green">神圣的</span>
     <<else>><span style="color:#f1e306">神圣的</span><</if>>
 <<if $chimeraq31 is 1 or $museumAntiques.antiques.antiquegoldchastitybelt is "museum" or $museumAntiques.antiques.antiquegoldcoin is "museum" or $museumAntiques.antiques.antiquegoldring is "museum" or $museumAntiques.antiques.antiquegoldbrooch is "museum" or $museumAntiques.antiques.antiquegoldcompass is "museum" or $museumAntiques.antiques.antiquegoldnecklace is "museum">>
-<span style="color:#00ea00">金</span><<else>><span style="color:#f1e306">金</span><</if>>
+<span style="color:green">金</span><<else>><span style="color:#f1e306">金</span><</if>>
 化为血肉，
-<<if $chimeraq31 is 1>><span style="color:#00ea00">塑银成体</span><<else>><span style="color:#d86920">塑银成体</span><</if>>
+<<if $chimeraq31 is 1>><span style="color:green">塑银成体</span><<else>><span style="color:#d86920">塑银成体</span><</if>>
 <br><br>
 
 二卵落于汪洋，由北风指引，登至海岛，岛上的国王供奉其于
-<<if $chimeraq32 is 1 or (!ndef $island && !ndef $island.home && !ndef $island[$island.home] && $island[$island.home].chair is "advanced")>><span style="color:#00ea00">王座</span><<else>><span style="color:#f1e306">王座</span><</if>>
+<<if $chimeraq32 is 1 or (!ndef $island && !ndef $island.home && !ndef $island[$island.home] && $island[$island.home].chair is "advanced")>><span style="color:green">王座</span><<else>><span style="color:#f1e306">王座</span><</if>>
 ，于
 <<if $chimeraq32 is 1>>血色月光<<else>><span style="color:#ee0a0a">血色月光</span><</if>>
 之下，
-<<if $chimeraq32 is 1>><span style="color:#00ea00">塑其魂魄</span><<else>><span style="color:#d86920">塑其魂魄</span><</if>>
+<<if $chimeraq32 is 1>><span style="color:green">塑其魂魄</span><<else>><span style="color:#d86920">塑其魂魄</span><</if>>
 <br><br>
 
 三卵埋于城村，藏沃土之下沉睡，于
-<<if $chimeraq33 is 1>><span style="color:#00ea00">万花绽放</span><<else>><span style="color:#f35de8">万花绽放</span><</if>>
+<<if $chimeraq33 is 1>><span style="color:green">万花绽放</span><<else>><span style="color:#f35de8">万花绽放</span><</if>>
 之时发芽，然遭
 <<if $chimeraq33 is 1>>诡异之花<<else>><span style="color:#c51dd9">诡异之花</span><</if>>
 侵蚀，虽
-<<if $chimeraq33 is 1>><span style="color:#00ea00">塑其心智</span><<else>><span style="color:#d86920">塑其心智</span><</if>>
+<<if $chimeraq33 is 1>><span style="color:green">塑其心智</span><<else>><span style="color:#d86920">塑其心智</span><</if>>
 ，却因污秽残缺。<br><br>
 
 <<link [[返回|Temple]]>><</link>>
@@ -212,4 +212,8 @@
 :: Chimera Quest33 Done 2
 <<set $chimeraq33 to 1>>
 当你回过神，你正仰面躺在地上，你的田似乎没有发生什么变化，只剩下那股花香依旧没有散去。<br><br>
-<<link [[返回|Farm Fields]]>><</link>>
+<<if $chimeraq33location is "farm">>
+  <<link [[返回|Farm Fields]]>><</link>>
+<<else>>
+  <<link [[返回|Garden Flowers]]>><</link>>
+<</if>>
