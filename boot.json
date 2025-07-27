@@ -88,9 +88,9 @@
                     "replace": "<<if $chimerastage is not 5>><<trauma 15>><</if>>"
                 },
                 {
-                    "passage": "Bird Tower Build Decor Silver",
-                    "findString": "<<link [[Next|Bird Tower]]>><<endevent>><</link>>",
-                    "replace": "<<if V.chimerastage is 3>><<link [[Next|Chimera Quest21]]>><<endevent>><</link>><<else>><<link [[Next|Bird Tower]]>><<endevent>><</link>><</if>>"
+                    "passage": "Bird Tower",
+                    "findString": "<<pregnancyPassout \"castle\">>",
+                    "replace": "<<pregnancyPassout \"castle\">>\n<<elseif V.chimerastage is 3>><span style=\"color:#d86920\">\"淬银至荒原之巅，\"</span><br><br>你已经按指示将银条带至高塔，但你不确定卷宗内的\"银碎\"是什么意思。难道你应该手动将其摔碎？<br>你拿起银条仔细观察，它表面光滑到足以映射出你的样貌：那是<<if $wolfgirl is 6>>一头狼<<elseif $cat is 6>>一只猫<<elseif $cow is 6>>一头牛<<elseif $harpy is 6>>一只鸟<<elseif $fox is 6>>一只狐狸<<else>>你自己<</if>>。<br>你听到了清脆的碎裂声，两道裂痕从双眼扩散。<br><br><span style=\"color:#d86920\">银条碎裂为三段。</span><br><br>碎裂的银块穿过你的双手，砸向地面。<br><br><<link [[接住|Chimera Quest22]]>><</link>>" 
                 }
             ]
         }

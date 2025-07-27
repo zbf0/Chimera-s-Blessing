@@ -1,3 +1,11 @@
+:: Chimera Stage 2 Give Name
+<<set $chimerastage to 2>>
+<<set $chimeraq33requiredflos to ["red_rose", "white_rose", "orchid", "daisy", "tulip", "lily", "poppy", "carnation", "plumeria"]>>
+你感到一个尖锐的东西抵上了你的额头，它在你的脑内刻下了扭曲的字符。你从未见过那些文字，但你能读懂。<br><br>
+<span style="color:#ffba02">奇美拉</span><br><br>
+<span style="color:#d86920">你从此处获得的转化将不再随时间消退。</span><br><br>
+<<link [[醒来|Chimera Statue]]>><</link>>
+
 :: Chimera End
 <<set $chimerastage to 5>>
 你的眼前是一片黑暗，你感觉到它靠近了。<br>

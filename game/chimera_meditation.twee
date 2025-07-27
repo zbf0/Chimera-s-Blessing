@@ -20,7 +20,7 @@
             你坐在草坪上，闭上眼。那种熟悉的被注视的感觉又出现了，你静静等待着......<br>
         <</if>>
         你的
-        <<if $wolfgirl is 6>>狼耳<<elseif $cat is 6>>猫尾<<elseif $cow is 6>>双角<<elseif $harpy is 6>>翅膀<<elseif $fox is 6>>狐尾<<else>>身体<</if>>
+        <<if $wolfgirl is 6>>狼耳<<elseif $cat is 10>>猫尾<<elseif $cow is 6>>双角<<elseif $harpy is 6>>翅膀<<elseif $fox is 6>>狐尾<<else>>身体<</if>>
         突然传来剧痛，有什么东西在无情地撕扯着你。你尖叫着挣扎，企图睁眼，却惊恐地发现你的眼皮黏在了一起。幸运的是，这股恐怖的力量很快就戛然而止，你大口喘着气，从地上爬起环顾四周。<br>
         周围的一切都没有任何变化，但你很确信那个存在没有离开，它的视线中似乎多出了一些...歉意？你不确定是否应该继续。<br>
     <</if>>
