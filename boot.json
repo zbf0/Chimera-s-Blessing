@@ -12,7 +12,8 @@
         "game/chimera_transform.twee",
         "game/chimera_quest.twee",
         "game/chimera_end.twee",
-        "game/chimera_lifeofquality.twee"
+        "game/chimera_lifeofquality.twee",
+        "game/chimera_settings.twee"
     ],
     "imgFileList": [],
     "additionFile": [],
@@ -79,13 +80,13 @@
                 },
                 {
                     "passage": "Hospital Foyer",
-                    "findString": "<<if $player.breastsize lte 11>>",
-                    "replace": "<<if V.chimerastage gte 3 && $psych is 0>><<link [[咨询你在森林深处看见的幻觉|Chimera Harper Appointment]]>><</link>><br><</if>>\n<<if $player.breastsize lte 11>>"
+                    "findString": "<<if $player.breastsize lt 12>>",
+                    "replace": "<<if V.chimerastage gte 3 && $psych is 0>><<link [[咨询你在森林深处看见的幻觉|Chimera Harper Appointment]]>><</link>><br><</if>>\n<<if $player.breastsize lt 12>>"
                 },
                 {
                     "passage": "Transformation Widgets",
                     "findString": "<<trauma 15>>",
-                    "replace": "<<if $chimerastage is not 5>><<trauma 15>><</if>>"
+                    "replace": "<<if ($chimerasimplemode is 1 and $chimerastage lt 2) or $chimerastage lt 5>><<trauma 15>><</if>>"
                 },
                 {
                     "passage": "Bird Tower",

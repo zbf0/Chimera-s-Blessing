@@ -1,0 +1,13 @@
+:: Chimera Settings
+<<if $chimerasimplemode is not 0 && $chimerasimplemode is not 1>>
+  <<set $chimerasimplemode to 0>>
+<</if>>
+<br>
+<div class="settingsToggleIndent"><span class="gold">奇美拉Mod的设置列表</span></div>
+<br>
+<div class="settingsToggleItem">多重动物转化能力<br>
+<label><<radiobutton "$chimerasimplemode" 0 autocheck>>原版：完成全部任务后获得</label><br>
+<label><<radiobutton "$chimerasimplemode" 1 autocheck>>前移：收集所有转化后获得</label><br>
+</div>
+
+<<link [[返回|Chimera Statue]]>><</link>>

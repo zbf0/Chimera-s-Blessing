@@ -57,6 +57,7 @@
 	<<set $transformationParts.traits.fangs to "default">>
 	<<set $transformationParts.traits.sharpEyes to "default">>
 	<<set $transformationParts.traits.mateForLife to "default">>
+	<<set $transformationParts.traits.chase to "default">>
 	<<set $transformationParts.fox.cheeks to "default">>
 	<<set $transformationParts.fox.ears to "default">>
 	<<set $transformationParts.fox.tail to "default">>
